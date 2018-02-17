@@ -18,7 +18,7 @@ class Sales:
 
     def __str__(self):
 
-        id_str = '(no id)' if self.id == None else self.id
+        id_str = '(no id)' if self.id is None else self.id
 
         template = 'id: {} Sale ItemId: {} Sale Quantity: {} Sale Total: {} ShowId: {} Update Ind: {}'
         return template.format(id_str, self.saleItemId, self.saleQuantity, self.saleTotal, self.showId, self.update_ind)

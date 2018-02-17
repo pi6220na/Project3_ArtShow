@@ -11,7 +11,7 @@ clear = lambda: os.system('cls')
 
 
 def print_main_menu():
-    clear()
+    #clear()
 
     valid = False
     choice = ''
@@ -20,10 +20,9 @@ def print_main_menu():
     message('')
     message('1) Add show info: Artists, Items, and Shows')
     message('2) Add a Sales record for a Show')
-    message('3) Modify a Record: Artists, Items, Shows, and Sales')
-    message('4) Delete a Record: Artists, Items, Shows, and Sales')
-    message('5) Show Info: Artists, Items, Shows, and Sales')
-    message('6) Analysis on Records')
+    message('3) Modify/Delete a Record: Artists, Items, Shows, and Sales')
+    message('4) Show Info: Artists, Items, Shows, and Sales')
+    message('5) Analysis on Records')
     message('"q" to quit the program')
     message('')
 
@@ -102,10 +101,286 @@ def add_sales_record():
 
 
 def modify_show_info():
-    pass
+    '''This function will allow the user to change/update/delete any record'''
+    clear()
 
-def delete_show_info():
-    pass
+    valid = False
+    choice = ''
+
+    message('')
+    message('  Update/Delete Show Information')
+    message('1) Artists Record')
+    message('2) Art Items Record')
+    message('3) Shows Record')
+    message('4) Sales Record')
+    message('"q" to return to main menu')
+    message('')
+
+    while not valid:
+
+        choice = input('Enter 1, 2, 3, 4, or q: ')
+        if (choice != '1' and choice != '2' and choice != '3' and choice != '4' and choice != 'q'):
+            message('Error, please enter 1, 2, 3, 4, or q to return: ')
+        else:
+            valid = True
+
+    if choice == '1':
+        update_artists_record()
+    elif choice == '2':
+        update_items_record()
+    elif choice == '3':
+        update_shows_record()
+    elif choice == '4':
+        update_sales_record()
+    else:
+        return
+
+
+def update_artists_record():
+    '''This function will update or delete an artists record from the artists_list list'''
+
+    clear()
+    message('')
+    message('*** Here are the available Artists. ')
+    for art in g.artists_list:
+        message(art)
+    message('')
+
+    artist_index = 0
+    valid = False
+    while True:
+        choiceNum = int(input('Please specify the record artist id you want to modify: '))
+
+        for idx, art in enumerate(g.artists_list):
+            print(idx, art)
+            if art.id == choiceNum:
+                print(art.id, choiceNum)
+                valid = True
+                artist_index = int(idx)
+
+        if valid:
+            mod_type = input('Modify the record or Delete the record? Input "m" or "d":' )
+            if mod_type.lower() == 'm':
+                modify_artists_record(artist_index)
+            elif mod_type.lower() == 'd':
+                delete_artists_record(artist_index)
+
+            break
+
+
+def modify_artists_record(artist_index):
+
+    print('Your record to modify is:')
+    print(g.artists_list[artist_index])
+
+    while True:
+        clear()
+        firstname = input('re-enter the first name of the artist: ')
+        lastname = input('re-enter the last name of the artist: ')
+        message('You entered {} {} '.format(firstname, lastname))
+        check = input('Is this correct? "y" or "n": ')
+        if check.lower() == 'y':
+            break
+
+    #junk = g.artists_list.pop([artist_index])     # remove the old element
+    update_ind = g.MODIFY
+    art = Artists(firstname, lastname, update_ind)  # generate a new replacement object
+    art.set_id(artist_index)
+    g.artists_list.insert(artist_index, art)        # insert the object back into the list where it came from
+
+
+def delete_artists_record(artist_index):
+    ''' pop item object off of list, change update_ind to DELETE and replace back into list '''
+
+    temp = g.artists_list.pop(artist_index)
+    temp.update_ind = g.DELETE
+    g.artists_list.append(temp)
+
+
+def update_items_record():
+    '''This function will update or delete an item record from the items_list list'''
+
+    clear()
+    message('')
+    message('*** Here are the available Items. ')
+    for item in g.items_list:
+        message(item)
+    message('')
+
+    item_index = 0
+    valid = False
+    while True:
+        choiceNum = int(input('Please specify the record item id you want to modify: '))
+
+        for idx, item in enumerate(g.items_list):
+            print(idx, item)
+            if item.id == choiceNum:
+                print(item.id, choiceNum)
+                valid = True
+                item_index = int(idx)
+
+        if valid:
+            mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
+            if mod_type.lower() == 'm':
+                modify_items_record(item_index)
+            elif mod_type.lower() == 'd':
+                delete_items_record(item_index)
+
+            break
+
+
+def modify_items_record(item_index):
+    print('Your record to modify is:')
+    print(g.items_list[item_index])
+
+    while True:
+        clear()
+        itemtype = input('Enter the type of item (e.g. print, painting, sculpture, other): ')
+        itemname = input('Enter the name of the item: ')
+        itemartistid = input('Enter the Artist ID from the above list: ')
+        message('You entered {} {} {}  '.format(itemtype, itemname, itemartistid))
+        check = input('Is this correct? "y" or "n": ')
+        if check.lower() == 'y':
+            break
+
+    update_ind = g.MODIFY
+    item = Artists(itemtype, itemname, itemartistid, update_ind)  # generate a new replacement object
+    item.set_id(item_index)
+    g.items_list.insert(item_index, item)  # insert the object back into the list where it came from
+
+    # for item in g.items_list:
+    #     message(item)
+
+
+def delete_items_record(item_index):
+    ''' pop item object off of list, change update_ind to DELETE and replace back into list '''
+
+    temp = g.items_list.pop(item_index)
+    temp.update_ind = g.DELETE
+    g.items_list.append(temp)
+
+
+def update_shows_record():
+    '''This function will update or delete an item record from the items_list list'''
+
+    clear()
+    message('')
+    message('*** Here are the available Shows. ')
+    for show in g.show_list:
+        message(show)
+    message('')
+
+    show_index = 0
+    valid = False
+    while True:
+        choiceNum = int(input('Please specify the record Show id you want to modify: '))
+
+        for idx, show in enumerate(g.show_list):
+            print(idx, show)
+            if show.id == choiceNum:
+                print(show.id, choiceNum)
+                valid = True
+                show_index = int(idx)
+
+        if valid:
+            mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
+            if mod_type.lower() == 'm':
+                modify_shows_record(show_index)
+            elif mod_type.lower() == 'd':
+                delete_shows_record(show_index)
+
+            break
+
+
+def modify_shows_record(show_index):
+    print('Your record to modify is:')
+    print(g.show_list[show_index])
+
+    while True:
+        clear()
+        showname = input('Enter the name of the Show: ')
+        showlocation = input('Enter the location of the Show (city/town name): ')
+        showdate = input('Enter the Show Date (YYYY-MM-DD): ')
+        message('You entered {} {} {}  '.format(showname, showlocation, showdate))
+        check = input('Is this correct? "y" or "n": ')
+        if check.lower() == 'y':
+            break
+
+    update_ind = g.MODIFY
+    show = Show(showname, showlocation, showdate, update_ind)  # generate a new replacement object
+    show.set_id(show_index)
+    g.items_list.insert(show_index, show)  # insert the object back into the list where it came from
+
+
+
+def delete_shows_record(show_index):
+    ''' pop item object off of list, change update_ind to DELETE and replace back into list '''
+
+    temp = g.show_list.pop(show_index)
+    temp.update_ind = g.DELETE
+    g.show_list.append(temp)
+
+
+def update_sales_record():
+    '''This function will update or delete an sales record from the sales_list list'''
+
+    clear()
+    message('')
+    message('*** Here are the available Sales. ')
+    for sale in g.sales_list:
+        message(sale)
+    message('')
+
+    sale_index = 0
+    valid = False
+    while True:
+        choiceNum = int(input('Please specify the record Sale id you want to modify: '))
+
+        for idx, sale in enumerate(g.sales_list):
+            print(idx, sale)
+            if sale.id == choiceNum:
+                print(sale.id, choiceNum)
+                valid = True
+                sale_index = int(idx)
+
+        if valid:
+            mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
+            if mod_type.lower() == 'm':
+                modify_sales_record(sale_index)
+            elif mod_type.lower() == 'd':
+                delete_sales_record(sale_index)
+
+            break
+
+
+def modify_sales_record(sale_index):
+    print('Your record to modify is:')
+    print(g.show_list[sale_index])
+
+    while True:
+        clear()
+        saleitemid = input('Enter the item ID of the sale item (an integer from above list): ')
+        salequantity = input('Enter the quantity of sales items sold: ')
+        saletotal = input('Enter the total sale dollar amount: ')
+        showid = input('Enter the Show ID (an integer from the above list): ')
+        message('You entered {} {} {} {} '.format(saleitemid, salequantity, saletotal, showid))
+        check = input('Is this correct? "y" or "n": ')
+        if check.lower() == 'y':
+            break
+
+    update_ind = g.MODIFY
+    sale = Sales(saleitemid, salequantity, saletotal, showid, update_ind)  # generate a new replacement object
+    sale.set_id(sale_index)
+    g.sales_list.insert(sale_index, sale)  # insert the object back into the list where it came from
+
+
+def delete_sales_record(sale_index):
+    ''' pop item object off of list, change update_ind to DELETE and replace back into list '''
+
+    temp = g.sales_list.pop(sale_index)
+    temp.update_ind = g.DELETE
+    g.sales_list.append(temp)
+
 
 def show_all_info():
     '''This function will display all database records to the user'''
@@ -125,6 +400,7 @@ def show_all_info():
 
 def analyze_records():
     pass
+    ####here
 
 
 def input_artists_info():

@@ -8,78 +8,6 @@ from show import Show
 
 
 
-def add_art_items_record():
-    pass
-
-
-def add_show_record():
-    pass
-
-
-def get_data():
-
-
-    name = input('Enter the name of the juggler: ')
-    country = input('Enter the country of the juggler: ')
-    catches = int(input('Enter the number of catches the juggle made: '))
-
-    return name, country, catches
-
-
-def add_to_db(cur, db, name, country, catches):
-
-    try:
-        with db:
-            cur.execute('insert into juggler values (?,?,?)', (name, country, catches))
-
-    except sqlite3.Error as e:
-        print('Database error: ', e)
-        traceback.print_exc()
-
-    finally:
-
-        return cur, db
-
-
-def update_juggler(cur, db):
-
-    name_in = input('Enter the name of the juggler to update: ')
-    catches_in = int(input('Enter the correct number of catches: '))
-
-    try:
-        with db:
-            cur.execute('update juggler set catches = ? where name = ?', (catches_in, name_in))
-
-    except sqlite3.Error as e:
-        print('Database error: ', e)
-        traceback.print_exc()
-
-
-def delete_juggler(cur, db):
-
-    ui.message('')
-    inp_name = input('Enter the name of the juggler: ')
-
-    try:
-        with db:
-            cur.execute('delete from juggler where name = ?', (inp_name,))
-
-    except sqlite3.Error as e:
-        print('Database error: ', e)
-        traceback.print_exc()
-
-
-def print_db(cur, db):
-
-    ui.message('')
-    try:
-        for row in cur.execute('select * from juggler'):
-            print(row)
-
-    except sqlite3.Error as e:
-        print('Database error: ', e)
-        traceback.print_exc()
-
 
 def create_db():
     '''Create a show_db SQLite database and populate with four tables'''
@@ -120,6 +48,18 @@ def create_db():
     finally:
 
         db.close()
+
+
+def read_db_for_records():
+    ''' call four functions, one per table, to read database tables into the corresponding list '''
+    g.artists_list = []
+    g.items_list = []
+    g.sales_list = []
+    g.show_list = []
+    read_db_for_artists()
+    read_db_for_items()
+    read_db_for_shows()
+    read_db_for_sales()
 
 
 def read_db_for_artists():
@@ -237,6 +177,14 @@ def read_db_for_sales():
         db.close()
 
 
+
+def update_records():
+    update_artists()
+    update_items()
+    update_show()
+    update_sales()
+
+
 def update_artists():
 
     db = sqlite3.connect('show_db.db')
@@ -261,9 +209,12 @@ def update_artists():
 
             try:
 
+                sql = 'update {} set FirstName = ?, LastName = ? where Artistid = ?'.format('artists')
                 with db:
-                    cur.execute('update artists set artists.FirstName = ?, artists.LastName = ? '
-                                'where artists.Artistid = ?', (artist.firstName, artist.lastName, artist.id))
+                    cur.execute(sql, (artist.firstName, artist.lastName, artist.id))
+
+
+                print(artist.firstName, artist.lastName, artist.id)
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -271,10 +222,13 @@ def update_artists():
 
         elif artist.update_ind == g.DELETE:      # delete list element from database
 
-            try:
+            print(artist.id)
+            print(type(artist.id))
 
+            try:
+                sql = 'delete from {} where Artistid = ?'.format('artists')
                 with db:
-                    cur.execute('delete from artists where artists.Artistid = ?', artist.id)
+                    cur.execute(sql, (artist.id,))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -283,7 +237,6 @@ def update_artists():
         else:
             if artist.update_ind == g.BLANK: # do nothing, nothing changed in database record
                 pass
-
 
     db.commit()
     db.close()
@@ -314,12 +267,11 @@ def update_items():
 
         elif item.update_ind == g.MODIFY:      # update a modified list element to database
 
+            sql = 'update {} set Itemsid = ?, ItemType = ?, ItemName = ?, where ItemArtistid = ?'.format('items')
             try:
 
                 with db:
-                    cur.execute('update items set items.Itemsid = ?, items.ItemType = ?, items.ItemName = ? '
-                                'where items.ItemArtistid = ?',
-                                (item.id, item.itemType, item.itemName, item.itemArtistid))
+                    cur.execute(sql, (item.id, item.itemType, item.itemName, item.itemArtistid))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -329,8 +281,9 @@ def update_items():
 
             try:
 
+                sql = 'delete from {} where Itemsid = ?'.format('items')
                 with db:
-                    cur.execute('delete from items where items.Itemsid = ?', item.id)
+                    cur.execute(sql, (item.id,))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -371,10 +324,9 @@ def update_show():
 
             try:
 
+                sql = 'update {} set ShowName = ?, ShowLocation = ?, ShowDate = ?, where Showid = ?'.format('show')
                 with db:
-                    cur.execute('update show set show.ShowName = ?, show.ShowLocation = ?, show.ShowDate = ?'
-                                'where show.Showid = ?',
-                                (show.showName, show.showLocation, show.showDate, show.id))
+                    cur.execute(sql, (show.showName, show.showLocation, show.showDate, show.id))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -384,8 +336,9 @@ def update_show():
 
             try:
 
+                sql = 'delete from {} where Showid = ?'.format('show')
                 with db:
-                    cur.execute('delete from show where show.Showid = ?', show.id)
+                    cur.execute(sql, (show.id,))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -424,13 +377,11 @@ def update_sales():
 
         elif sale.update_ind == g.MODIFY:      # update a modified list element to database
 
+            sql = 'update {} set SaleItemid = ?, SaleQuantity = ?, SaleTotal = ?, ' \
+                  'Showid = ? where Saleid = ?'.format('sales')
             try:
-
                 with db:
-                    cur.execute('update sales set sales.SaleItemid = ?, sales.SaleQuantity = ?, '
-                                'sales.SaleTotal = ?, sales.Showid = ?'
-                                'where sales.Saleid = ?',
-                                (sale.saleItemId, sale.SaleQuantity, sale.SaleTotal, sale.sale.Showid, sale.Saleid))
+                    cur.execute(sql, (sale.saleItemId, sale.SaleQuantity, sale.SaleTotal, sale.showId, sale.id))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
@@ -440,8 +391,9 @@ def update_sales():
 
             try:
 
+                sql = 'delete from {} where Saleid = ?'.format('sales')
                 with db:
-                    cur.execute('delete from sales where sales.Saleid = ?', sale.Saleid)
+                    cur.execute(sql, (sale.id,))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)

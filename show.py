@@ -16,7 +16,7 @@ class Show:
         self.id = id
 
     def __str__(self):
-        id_str = '(no id)' if self.id == None else self.id
+        id_str = '(no id)' if self.id is None else self.id
 
         template = 'id: {} Show Name: {} Show Location: {} Show Date: {} Update Ind: {}'
         return template.format(id_str, self.showName, self.showLocation, self.showDate, self.update_ind)
