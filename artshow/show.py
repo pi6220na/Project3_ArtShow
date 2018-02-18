@@ -18,7 +18,7 @@ class Show:
     def __str__(self):
         id_str = '(no id)' if self.id is None else self.id
 
-        template = 'id: {} Show Name: {} Show Location: {} Show Date: {} Update Ind: {}'
+        template = 'id: {} \t\t Show Name: {:20} \t\t Show Location: {:20} \t\t Show Date: {} \t\t Update Ind: {}'
         return template.format(id_str, self.showName, self.showLocation, self.showDate, self.update_ind)
 
     def __repr__(self):

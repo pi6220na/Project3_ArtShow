@@ -1,8 +1,12 @@
-from artists import Artists
-from items import Items
-from sales import Sales
-from show import Show
-import g
+from artshow.artists import Artists
+from artshow.items import Items
+from artshow.sales import Sales
+from artshow.show import Show
+from artshow import g
+
+import logging
+import logging.config
+log = logging.getLogger(__name__)
 
 # the following clear screen technique works on windows machines when running the .py file in a terminal or CMD prompt
 # it does not work within the pyCharm run window and instead shows a  symbol
@@ -12,6 +16,8 @@ clear = lambda: os.system('cls')
 
 def print_main_menu():
     #clear()
+
+    logging.info("Entering UI - User Interface module")
 
     valid = False
     choice = ''
@@ -31,7 +37,8 @@ def print_main_menu():
         choice = input('Enter 1, 2, 3, 4, or 5 or q: ')
         if (choice != '1' and choice != '2' and choice != '3' and choice != '4'
                 and choice != '5' and choice != 'q'):
-            message('Error, please enter 1, 2, 3, 4, or 5 or q to quit: ')
+            print('Error, please enter 1, 2, 3, 4, or 5 or q to quit: ')
+            logging.info('The user made an input value error.')
         else:
             valid = True
 
@@ -57,6 +64,7 @@ def add_show_info():
         choice_1 = input('Enter 1, 2, 3, or q: ')
         if (choice_1 != '1' and choice_1 != '2' and choice_1 != '3' and choice_1 != 'q'):
             message('Error, please enter 1, 2, 3, or q to return: ')
+            logging.info('The user made an input value error.')
         else:
             valid = True
 
@@ -83,10 +91,10 @@ def add_sales_record():
 
     while True:
         clear()
-        saleitemid = input('Enter the item ID of the sale item (an integer from above list): ')
-        salequantity = input('Enter the quantity of sales items sold: ')
-        saletotal = input('Enter the total sale dollar amount: ')
-        showid = input('Enter the Show ID (an integer from the above list): ')
+        saleitemid = int(input('Enter the item ID of the sale item (an integer from above list): '))
+        salequantity = int(input('Enter the quantity of sales items sold: '))
+        saletotal = float(input('Enter the total sale dollar amount: '))
+        showid = int(input('Enter the Show ID (an integer from the above list): '))
         message('You entered {} {} {} {} '.format(saleitemid, salequantity, saletotal, showid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':
@@ -121,6 +129,7 @@ def modify_show_info():
         choice = input('Enter 1, 2, 3, 4, or q: ')
         if (choice != '1' and choice != '2' and choice != '3' and choice != '4' and choice != 'q'):
             message('Error, please enter 1, 2, 3, 4, or q to return: ')
+            logging.info('The user made an input value error.')
         else:
             valid = True
 
@@ -147,28 +156,30 @@ def update_artists_record():
     message('')
 
     artist_index = 0
+    artist_id = 0
     valid = False
     while True:
-        choiceNum = int(input('Please specify the record artist id you want to modify: '))
+        choiceNum = int(input('Please specify the artist record id you want to modify: '))
 
         for idx, art in enumerate(g.artists_list):
-            print(idx, art)
+            #print(idx, art)
             if art.id == choiceNum:
-                print(art.id, choiceNum)
+                #print(art.id, choiceNum)
                 valid = True
                 artist_index = int(idx)
+                artist_id = art.id
 
         if valid:
             mod_type = input('Modify the record or Delete the record? Input "m" or "d":' )
             if mod_type.lower() == 'm':
-                modify_artists_record(artist_index)
+                modify_artists_record(artist_index, artist_id)
             elif mod_type.lower() == 'd':
                 delete_artists_record(artist_index)
 
             break
 
 
-def modify_artists_record(artist_index):
+def modify_artists_record(artist_index, artist_id):
 
     print('Your record to modify is:')
     print(g.artists_list[artist_index])
@@ -185,8 +196,11 @@ def modify_artists_record(artist_index):
     #junk = g.artists_list.pop([artist_index])     # remove the old element
     update_ind = g.MODIFY
     art = Artists(firstname, lastname, update_ind)  # generate a new replacement object
-    art.set_id(artist_index)
+    art.set_id(artist_id)
     g.artists_list.insert(artist_index, art)        # insert the object back into the list where it came from
+
+    print('added artist record back into list')
+    print(art)
 
 
 def delete_artists_record(artist_index):
@@ -208,28 +222,30 @@ def update_items_record():
     message('')
 
     item_index = 0
+    item_id = 0
     valid = False
     while True:
         choiceNum = int(input('Please specify the record item id you want to modify: '))
 
         for idx, item in enumerate(g.items_list):
-            print(idx, item)
+            #print(idx, item)
             if item.id == choiceNum:
-                print(item.id, choiceNum)
+                #print(item.id, choiceNum)
                 valid = True
                 item_index = int(idx)
+                item_id = item.id
 
         if valid:
             mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
             if mod_type.lower() == 'm':
-                modify_items_record(item_index)
+                modify_items_record(item_index, item_id)
             elif mod_type.lower() == 'd':
                 delete_items_record(item_index)
 
             break
 
 
-def modify_items_record(item_index):
+def modify_items_record(item_index, item_id):
     print('Your record to modify is:')
     print(g.items_list[item_index])
 
@@ -237,7 +253,7 @@ def modify_items_record(item_index):
         clear()
         itemtype = input('Enter the type of item (e.g. print, painting, sculpture, other): ')
         itemname = input('Enter the name of the item: ')
-        itemartistid = input('Enter the Artist ID from the above list: ')
+        itemartistid = int(input('Enter the Artist ID from the above list: '))
         message('You entered {} {} {}  '.format(itemtype, itemname, itemartistid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':
@@ -245,7 +261,7 @@ def modify_items_record(item_index):
 
     update_ind = g.MODIFY
     item = Artists(itemtype, itemname, itemartistid, update_ind)  # generate a new replacement object
-    item.set_id(item_index)
+    item.set_id(item_id)
     g.items_list.insert(item_index, item)  # insert the object back into the list where it came from
 
     # for item in g.items_list:
@@ -271,28 +287,30 @@ def update_shows_record():
     message('')
 
     show_index = 0
+    show_id = 0
     valid = False
     while True:
         choiceNum = int(input('Please specify the record Show id you want to modify: '))
 
         for idx, show in enumerate(g.show_list):
-            print(idx, show)
+            #print(idx, show)
             if show.id == choiceNum:
-                print(show.id, choiceNum)
+                #print(show.id, choiceNum)
                 valid = True
                 show_index = int(idx)
+                show_index = show_id
 
         if valid:
             mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
             if mod_type.lower() == 'm':
-                modify_shows_record(show_index)
+                modify_shows_record(show_index, show_id)
             elif mod_type.lower() == 'd':
                 delete_shows_record(show_index)
 
             break
 
 
-def modify_shows_record(show_index):
+def modify_shows_record(show_index, show_id):
     print('Your record to modify is:')
     print(g.show_list[show_index])
 
@@ -308,7 +326,7 @@ def modify_shows_record(show_index):
 
     update_ind = g.MODIFY
     show = Show(showname, showlocation, showdate, update_ind)  # generate a new replacement object
-    show.set_id(show_index)
+    show.set_id(show_id)
     g.items_list.insert(show_index, show)  # insert the object back into the list where it came from
 
 
@@ -332,37 +350,39 @@ def update_sales_record():
     message('')
 
     sale_index = 0
+    sale_id = 0
     valid = False
     while True:
         choiceNum = int(input('Please specify the record Sale id you want to modify: '))
 
         for idx, sale in enumerate(g.sales_list):
-            print(idx, sale)
+            #print(idx, sale)
             if sale.id == choiceNum:
-                print(sale.id, choiceNum)
+                #print(sale.id, choiceNum)
                 valid = True
                 sale_index = int(idx)
+                sale_id = sale.id
 
         if valid:
             mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
             if mod_type.lower() == 'm':
-                modify_sales_record(sale_index)
+                modify_sales_record(sale_index, sale_id)
             elif mod_type.lower() == 'd':
                 delete_sales_record(sale_index)
 
             break
 
 
-def modify_sales_record(sale_index):
+def modify_sales_record(sale_index, sale_id):
     print('Your record to modify is:')
     print(g.show_list[sale_index])
 
     while True:
         clear()
-        saleitemid = input('Enter the item ID of the sale item (an integer from above list): ')
-        salequantity = input('Enter the quantity of sales items sold: ')
-        saletotal = input('Enter the total sale dollar amount: ')
-        showid = input('Enter the Show ID (an integer from the above list): ')
+        saleitemid = int(input('Enter the item ID of the sale item (an integer from above list): '))
+        salequantity = int(input('Enter the quantity of sales items sold: '))
+        saletotal = float(input('Enter the total sale dollar amount: '))
+        showid = int(input('Enter the Show ID (an integer from the above list): '))
         message('You entered {} {} {} {} '.format(saleitemid, salequantity, saletotal, showid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':
@@ -370,7 +390,7 @@ def modify_sales_record(sale_index):
 
     update_ind = g.MODIFY
     sale = Sales(saleitemid, salequantity, saletotal, showid, update_ind)  # generate a new replacement object
-    sale.set_id(sale_index)
+    sale.set_id(sale_id)
     g.sales_list.insert(sale_index, sale)  # insert the object back into the list where it came from
 
 
@@ -397,10 +417,6 @@ def show_all_info():
     message('###########  Sales Records  ############')
     for sale in g.sales_list:
         message(sale)
-
-def analyze_records():
-    pass
-    ####here
 
 
 def input_artists_info():
@@ -442,7 +458,7 @@ def input_art_items_info():
         clear()
         itemtype = input('Enter the type of item (e.g. print, painting, sculpture, other): ')
         itemname = input('Enter the name of the item: ')
-        itemartistid = input('Enter the Artist ID from the above list: ')
+        itemartistid = int(input('Enter the Artist ID from the above list: '))
         message('You entered {} {} {}  '.format(itemtype, itemname, itemartistid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':

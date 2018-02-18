@@ -10,6 +10,6 @@ show_list = []
 
 # list modifier constants used in lists update-ind field
 ADD = 'a'       # add a record
-MODIFY = 'm'    # modify a record
+MODIFY = 'm'    # update a record
 BLANK = ' '     # no change to record
 DELETE = 'd'    # delete a record

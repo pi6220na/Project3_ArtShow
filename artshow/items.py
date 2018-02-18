@@ -19,7 +19,7 @@ class Items:
 
         id_str = '(no id)' if self.id is None else self.id
 
-        template = 'id: {} Item Type: {} Item Name: {} Item Artist Id: {} Update Ind: {}'
+        template = 'id: {} \t\t Item Type: {:15} \t\t Item Name: {:20} \t\t Item Artist Id: {} \t\t Update Ind: {}'
         return template.format(id_str, self.itemType, self.itemName, self.itemArtistId, self.update_ind)
 
     def __repr__(self):

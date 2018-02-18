@@ -1,0 +1,237 @@
+2018-02-18 13:29:14,157 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 13:29:14,157 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 13:29:14,157 - root - INFO - show_manager : 35 - 2
+2018-02-18 13:29:14,157 - root - WARNING - show_manager : 36 - 3
+2018-02-18 13:29:14,157 - root - ERROR - show_manager : 37 - 4
+2018-02-18 13:29:14,158 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 13:29:14,158 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 13:29:14,165 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:29:59,088 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:30:15,167 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:37:52,849 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:37:53,855 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 13:37:53,877 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:38:47,047 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:38:50,112 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:39:34,432 - root - DEBUG - show_manager : 90 - Quiting Program Normally
+2018-02-18 13:39:39,100 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 13:39:39,101 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 13:39:39,101 - root - INFO - show_manager : 35 - 2
+2018-02-18 13:39:39,101 - root - WARNING - show_manager : 36 - 3
+2018-02-18 13:39:39,101 - root - ERROR - show_manager : 37 - 4
+2018-02-18 13:39:39,101 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 13:39:39,101 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 13:39:39,107 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:40:29,126 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:40:39,984 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:40:46,784 - root - DEBUG - show_manager : 90 - Quiting Program Normally
+2018-02-18 13:43:02,524 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 13:43:02,524 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 13:43:02,524 - root - INFO - show_manager : 35 - 2
+2018-02-18 13:43:02,524 - root - WARNING - show_manager : 36 - 3
+2018-02-18 13:43:02,524 - root - ERROR - show_manager : 37 - 4
+2018-02-18 13:43:02,525 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 13:43:02,525 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 13:43:02,531 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:43:25,736 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:48:53,518 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 13:48:53,518 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 13:48:53,518 - root - INFO - show_manager : 35 - 2
+2018-02-18 13:48:53,518 - root - WARNING - show_manager : 36 - 3
+2018-02-18 13:48:53,518 - root - ERROR - show_manager : 37 - 4
+2018-02-18 13:48:53,518 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 13:48:53,519 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 13:48:53,524 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:49:23,541 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:49:34,593 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 13:51:38,944 - root - DEBUG - show_manager : 90 - Quiting Program Normally
+2018-02-18 13:51:42,204 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 13:51:42,204 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 13:51:42,205 - root - INFO - show_manager : 35 - 2
+2018-02-18 13:51:42,205 - root - WARNING - show_manager : 36 - 3
+2018-02-18 13:51:42,205 - root - ERROR - show_manager : 37 - 4
+2018-02-18 13:51:42,205 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 13:51:42,205 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 13:51:42,211 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:32:17,638 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 14:32:17,639 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 14:32:17,639 - root - INFO - show_manager : 35 - 2
+2018-02-18 14:32:17,639 - root - WARNING - show_manager : 36 - 3
+2018-02-18 14:32:17,639 - root - ERROR - show_manager : 37 - 4
+2018-02-18 14:32:17,640 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 14:32:17,640 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 14:32:17,650 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:32:51,349 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:33:03,186 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:33:29,574 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:33:35,459 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:39:40,409 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 14:39:40,410 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 14:39:40,410 - root - INFO - show_manager : 35 - 2
+2018-02-18 14:39:40,410 - root - WARNING - show_manager : 36 - 3
+2018-02-18 14:39:40,410 - root - ERROR - show_manager : 37 - 4
+2018-02-18 14:39:40,410 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 14:39:40,410 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 14:39:40,416 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:40:03,213 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:40:11,825 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:41:12,565 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:41:14,450 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:42:08,787 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:42:11,761 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:42:39,331 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:42:42,498 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:42:57,012 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:43:09,010 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:43:22,034 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:44:08,612 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:44:11,042 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:44:28,788 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:44:31,234 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:48:40,461 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 14:48:40,462 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 14:48:40,462 - root - INFO - show_manager : 35 - 2
+2018-02-18 14:48:40,462 - root - WARNING - show_manager : 36 - 3
+2018-02-18 14:48:40,462 - root - ERROR - show_manager : 37 - 4
+2018-02-18 14:48:40,462 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 14:48:40,462 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 14:48:40,468 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 14:59:53,784 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 14:59:53,784 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 14:59:53,785 - root - INFO - show_manager : 35 - 2
+2018-02-18 14:59:53,785 - root - WARNING - show_manager : 36 - 3
+2018-02-18 14:59:53,785 - root - ERROR - show_manager : 37 - 4
+2018-02-18 14:59:53,785 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 14:59:53,785 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 14:59:53,791 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:00:38,566 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:00:42,274 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:01:13,651 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:01:15,234 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:01:31,398 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:01:43,048 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:01:44,739 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:02:04,852 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:02:08,833 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:04:34,883 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:04:34,883 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:04:34,883 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:04:34,884 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:04:34,884 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:04:34,884 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:04:34,884 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:04:34,891 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:05:10,522 - root - ERROR - dstore : 372 - Database error FOREIGN KEY constraint failed
+2018-02-18 15:05:10,528 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:05:16,930 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:05:56,033 - root - DEBUG - show_manager : 90 - Quiting Program Normally
+2018-02-18 15:09:15,150 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:09:15,150 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:09:15,150 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:09:15,150 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:09:15,150 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:09:15,150 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:09:15,150 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:09:15,156 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:10:10,760 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:10:10,761 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:10:10,761 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:10:10,761 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:10:10,761 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:10:10,761 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:10:10,761 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:10:10,768 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:12:07,095 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:12:07,095 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:12:07,095 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:12:07,096 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:12:07,096 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:12:07,096 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:12:07,096 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:12:07,102 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:13:19,095 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:13:19,095 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:13:19,095 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:13:19,096 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:13:19,096 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:13:19,096 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:13:19,096 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:13:19,102 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:14:34,994 - root - DEBUG - show_manager : 90 - Quiting Program Normally
+2018-02-18 15:14:41,740 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:14:41,740 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:14:41,740 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:14:41,741 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:14:41,741 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:14:41,741 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:14:41,741 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:14:41,747 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:16:11,378 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 15:16:11,399 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:19:52,448 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:19:52,448 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:19:52,448 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:19:52,448 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:19:52,448 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:19:52,449 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:19:52,449 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:19:52,457 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:19:55,506 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 15:19:55,527 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:23:27,939 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:23:27,939 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:23:27,939 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:23:27,939 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:23:27,939 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:23:27,940 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:23:27,940 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:23:27,948 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:23:32,001 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 15:23:32,022 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:24:02,610 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:24:03,617 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 15:24:03,637 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:24:04,434 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:25:13,140 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:25:14,770 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:26:23,576 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:26:54,403 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:26:55,922 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:27:38,723 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:27:43,314 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:28:24,438 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:28:26,338 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:28:40,593 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 15:28:40,616 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:30:41,490 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:31:03,722 - root - ERROR - dstore : 372 - Database error FOREIGN KEY constraint failed
+2018-02-18 15:31:03,729 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:31:09,346 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:31:29,929 - root - ERROR - dstore : 254 - Database error FOREIGN KEY constraint failed
+2018-02-18 15:31:29,938 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:31:35,474 - root - DEBUG - show_manager : 90 - Quiting Program Normally
+2018-02-18 15:34:11,147 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:34:11,147 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:34:11,147 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:34:11,147 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:34:11,147 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:34:11,147 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:34:11,147 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:34:11,153 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:34:21,497 - root - ERROR - dstore : 254 - Database error FOREIGN KEY constraint failed
+2018-02-18 15:34:21,498 - root - ERROR - dstore : 255 - None
+2018-02-18 15:34:21,504 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:34:25,506 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:36:12,205 - root - DEBUG - show_manager : 33 - Starting main program show_manager.py
+2018-02-18 15:36:12,205 - root - DEBUG - show_manager : 34 - 1
+2018-02-18 15:36:12,205 - root - INFO - show_manager : 35 - 2
+2018-02-18 15:36:12,205 - root - WARNING - show_manager : 36 - 3
+2018-02-18 15:36:12,205 - root - ERROR - show_manager : 37 - 4
+2018-02-18 15:36:12,205 - root - CRITICAL - show_manager : 38 - 5
+2018-02-18 15:36:12,205 - root - INFO - dstore : 17 - Entering Database module
+2018-02-18 15:36:12,211 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:36:25,225 - root - ERROR - dstore : 254 - Database error FOREIGN KEY constraint failed
+2018-02-18 15:36:25,226 - root - ERROR - dstore : 255 - None
+2018-02-18 15:36:25,233 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 15:37:21,266 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-18 15:37:21,286 - root - INFO - ui : 20 - Entering UI - User Interface module

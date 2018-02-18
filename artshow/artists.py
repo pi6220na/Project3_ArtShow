@@ -18,7 +18,7 @@ class Artists:
 
         id_str = '(no id)' if self.id is None else self.id
 
-        template = 'id: {} First Name: {} Last Name: {} Update Ind: {}'
+        template = 'id: {} \t\t First Name: {:15} \t\t Last Name: {:15} \t\t Update Ind: {}'
         return template.format(id_str, self.firstName, self.lastName, self.update_ind)
 
     def __repr__(self):

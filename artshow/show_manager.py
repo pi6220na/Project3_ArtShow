@@ -18,9 +18,24 @@ E.g. The Sales record/element contains pointers (integer id's) to other records/
 are enforced on the database via foreign key constraint enforcement.
 
 '''
-import ui,dstore
+from artshow import dstore, ui, analysis
+import logging
+import logging.config
+#logging.basicConfig(filename='artshow.log', level=logging.INFO)
 
 def main():
+
+    #log = logging.getLogger(__name__)
+    #log.info("Hello logging!")
+
+    logging.config.fileConfig("log.conf")
+
+    logging.debug("Starting main program show_manager.py")
+    logging.debug("1")          # test logging level
+    logging.info("2")           # test logging level
+    logging.warning("3")        # test logging level
+    logging.error("4")          # test logging level
+    logging.critical("5")       # test logging level
 
     dstore.create_db()  # create database and table juggler
 
@@ -52,6 +67,7 @@ def main():
 
         # sales records input separately because of dependencies on the other three record table types
         if choice == '2':
+
             ui.add_sales_record()
             dstore.update_records()
             dstore.read_db_for_records()
@@ -66,11 +82,13 @@ def main():
         if choice == '4':
             ui.show_all_info()
 
-        # allow the user to request some simple analysis functions on the database data.
+        # perform some simple analysis functions on the database objects as stored in lists.
         if choice == '5':
-            ui.analyze_records()
+            analysis.analyze_records()
 
         if choice == 'q':
+            logging.debug("Quiting Program Normally")
             break   # break out of while loop and exist program
 
 main()
+

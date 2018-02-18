@@ -20,8 +20,8 @@ class Sales:
 
         id_str = '(no id)' if self.id is None else self.id
 
-        template = 'id: {} Sale ItemId: {} Sale Quantity: {} Sale Total: {} ShowId: {} Update Ind: {}'
-        return template.format(id_str, self.saleItemId, self.saleQuantity, self.saleTotal, self.showId, self.update_ind)
+        return 'id: {} \t\t Sale ItemId: {} \t\t Sale Quantity: {:5d} \t\t Sale Total: ${:12,.2f} \t\t ShowId: {} \t\t Update Ind: {}'\
+            .format(id_str, self.saleItemId, self.saleQuantity, self.saleTotal, self.showId, self.update_ind)
 
     def __repr__(self):
         return 'id: {} Sale ItemId: {} Sale Quantity: {} Sale Total: {} ShowId: {} Update Ind: {}' \
