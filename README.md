@@ -42,3 +42,5 @@ Logging:
     artShow.log - example log file
     log.conf - logging configuration file
    
+Database Loader:
+    db_loader.py - stand-alone loads db from JSON files
