@@ -1,0 +1,8 @@
+2018-02-19 16:17:36,174 - root - DEBUG - show_manager : 36 - Starting main program show_manager.py
+2018-02-19 16:17:36,175 - root - DEBUG - show_manager : 37 - 1
+2018-02-19 16:17:36,175 - root - INFO - show_manager : 38 - 2
+2018-02-19 16:17:36,175 - root - WARNING - show_manager : 39 - 3
+2018-02-19 16:17:36,175 - root - ERROR - show_manager : 40 - 4
+2018-02-19 16:17:36,175 - root - CRITICAL - show_manager : 41 - 5
+2018-02-19 16:17:36,175 - root - INFO - dstore : 17 - Entering Database module
+2018-02-19 16:17:36,182 - root - INFO - ui : 20 - Entering UI - User Interface module

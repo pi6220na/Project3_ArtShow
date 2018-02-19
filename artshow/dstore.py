@@ -1,7 +1,7 @@
 import sqlite3
 import traceback
 from artshow import ui, g
-from artshow.artists import Artists
+from artists import Artists
 from artshow.items import Items
 from artshow.sales import Sales
 from artshow.show import Show

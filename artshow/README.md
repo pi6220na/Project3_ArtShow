@@ -15,32 +15,40 @@ E.g. The Sales record/element contains pointers (integer id's) to other records/
 are enforced on the database via foreign key constraint enforcement.
 
 Database Tables:
-    artists - artist name
-    items - type, item name, artist id
-    show - show name, location, date
-    sales - item id, sale quantity, sale total, show id
-    
+
+* artists - artist name
+* items - type, item name, artist id
+* show - show name, location, date
+* sales - item id, sale quantity, sale total, show id
+
 Modules:
-    analysis.py - option 5 main menu - perform analysis on objects in table lists
-    dstore.py - database functions
-    show_manager.py - main control module
-    ui.py - user interface module - bulk of program logic in here
-    
+
+* analysis.py - option 5 main menu - perform analysis on objects in table lists
+* dstore.py - database functions
+* show_manager.py - main control module
+* ui.py - user interface module - bulk of program logic in here
+
 Classes:
-    artists.py
-    items.py
-    sales.py
-    show.py
-    
+
+* artists.py,
+* items.py,
+* sales.py,
+* show.py,
+
 Global container:
-    g.py
-  
+
+* g.py
+
 Database:
-    show_db.db
-    
+
+* show_db.db
+
 Logging:
-    artShow.log - example log file
-    log.conf - logging configuration file
-   
+
+* artShow.log - example log file,
+* log.conf - logging configuration file
+
 Database Loader:
-    db_loader.py - stand-alone loads db from JSON files
+
+* db_loader.py - stand-alone loads db from JSON files
+

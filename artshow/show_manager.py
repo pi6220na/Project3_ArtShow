@@ -20,7 +20,8 @@ are enforced on the database via foreign key constraint enforcement.
 Info and Error level logging entries are made and logged to artShow.log
 
 '''
-from artshow import dstore, ui, analysis
+import analysis
+from artshow import ui, dstore
 import logging
 import logging.config
 #logging.basicConfig(filename='artshow.log', level=logging.INFO)
@@ -30,7 +31,7 @@ def main():
     #log = logging.getLogger(__name__)
     #log.info("Hello logging!")
 
-    logging.config.fileConfig("log.conf")
+    logging.config.fileConfig("logs/log.conf")
 
     logging.debug("Starting main program show_manager.py")
     logging.debug("1")          # test logging level
