@@ -235,3 +235,5 @@
 2018-02-18 15:36:25,233 - root - INFO - ui : 20 - Entering UI - User Interface module
 2018-02-18 15:37:21,266 - root - INFO - analysis : 16 - Entering Analysis module
 2018-02-18 15:37:21,286 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 16:01:42,210 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-18 16:01:43,890 - root - DEBUG - show_manager : 90 - Quiting Program Normally

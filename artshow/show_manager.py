@@ -17,6 +17,8 @@ Simple analysis functions are available to format the information based on the d
 E.g. The Sales record/element contains pointers (integer id's) to other records/elements. These relationships
 are enforced on the database via foreign key constraint enforcement.
 
+Info and Error level logging entries are made and logged to artShow.log
+
 '''
 from artshow import dstore, ui, analysis
 import logging

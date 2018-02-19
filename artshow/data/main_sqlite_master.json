@@ -1,0 +1,65 @@
+[
+  {
+    "type": "table",
+    "name": "show",
+    "tbl_name": "show",
+    "rootpage": 2,
+    "sql": "CREATE TABLE `show` (`Showid` INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,`ShowName` TEXT, `ShowLocation` TEXT, `ShowDate` TEXT)"
+  },
+  {
+    "type": "index",
+    "name": "sqlite_autoindex_show_1",
+    "tbl_name": "show",
+    "rootpage": 3,
+    "sql": null
+  },
+  {
+    "type": "table",
+    "name": "sqlite_sequence",
+    "tbl_name": "sqlite_sequence",
+    "rootpage": 4,
+    "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+  },
+  {
+    "type": "table",
+    "name": "artists",
+    "tbl_name": "artists",
+    "rootpage": 5,
+    "sql": "CREATE TABLE `artists`(`Artistid` INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,`FirstName` TEXT,`LastName`\tTEXT)"
+  },
+  {
+    "type": "index",
+    "name": "sqlite_autoindex_artists_1",
+    "tbl_name": "artists",
+    "rootpage": 6,
+    "sql": null
+  },
+  {
+    "type": "table",
+    "name": "items",
+    "tbl_name": "items",
+    "rootpage": 7,
+    "sql": "CREATE TABLE `items` (`Itemsid`\tINTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,`ItemType`\tTEXT,`ItemName`\tTEXT,`ItemArtistid`\tINTEGER NOT NULL , FOREIGN KEY(`ItemArtistid`) REFERENCES `artists`(`Artistid`))"
+  },
+  {
+    "type": "index",
+    "name": "sqlite_autoindex_items_1",
+    "tbl_name": "items",
+    "rootpage": 8,
+    "sql": null
+  },
+  {
+    "type": "table",
+    "name": "sales",
+    "tbl_name": "sales",
+    "rootpage": 9,
+    "sql": "CREATE TABLE `sales` (`Saleid` INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,`SaleItemid` INTEGER,`SaleQuantity` INTEGER,`SaleTotal` NUMERIC,`Showid` INTEGER NOT NULL, FOREIGN KEY(`Showid`) REFERENCES `show`(`Showid`),FOREIGN KEY(`SaleItemid`) REFERENCES `items`(`Itemsid`))"
+  },
+  {
+    "type": "index",
+    "name": "sqlite_autoindex_sales_1",
+    "tbl_name": "sales",
+    "rootpage": 10,
+    "sql": null
+  }
+]
