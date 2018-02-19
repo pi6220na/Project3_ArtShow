@@ -18,7 +18,7 @@ def create_db():
 
     try:
 
-        db = sqlite3.connect('show_db.db')
+        db = sqlite3.connect('data/show_db.db')
         cur = db.cursor()
         cur.execute("PRAGMA foreign_keys=ON")
 
@@ -73,7 +73,7 @@ def read_db_for_artists():
     '''Read show_db SQLite database and populate artists list'''
     try:
 
-        db = sqlite3.connect('show_db.db')
+        db = sqlite3.connect('data/show_db.db')
         cur = db.cursor()
         cur.execute("PRAGMA foreign_keys=ON")
 
@@ -103,7 +103,7 @@ def read_db_for_items():
     '''Read show_db SQLite database and populate item list'''
     try:
 
-        db = sqlite3.connect('show_db.db')
+        db = sqlite3.connect('data/show_db.db')
         cur = db.cursor()
         cur.execute("PRAGMA foreign_keys=ON")
 
@@ -134,7 +134,7 @@ def read_db_for_shows():
     '''Read show_db SQLite database and populate show list'''
     try:
 
-        db = sqlite3.connect('show_db.db')
+        db = sqlite3.connect('data/show_db.db')
         cur = db.cursor()
         cur.execute("PRAGMA foreign_keys=ON")
 
@@ -165,7 +165,7 @@ def read_db_for_sales():
     '''Read show_db SQLite database and populate sales list'''
     try:
 
-        db = sqlite3.connect('show_db.db')
+        db = sqlite3.connect('data/show_db.db')
         cur = db.cursor()
         cur.execute("PRAGMA foreign_keys=ON")
 
@@ -202,7 +202,7 @@ def update_records():
 
 def update_artists():
 
-    db = sqlite3.connect('show_db.db')
+    db = sqlite3.connect('data/show_db.db')
     cur = db.cursor()
     cur.execute("PRAGMA foreign_keys=ON")
 
@@ -264,7 +264,7 @@ def update_artists():
 
 def update_items():
 
-    db = sqlite3.connect('show_db.db')
+    db = sqlite3.connect('data/show_db.db')
     cur = db.cursor()
     cur.execute("PRAGMA foreign_keys=ON")
 
@@ -323,7 +323,7 @@ def update_items():
 
 def update_show():
 
-    db = sqlite3.connect('show_db.db')
+    db = sqlite3.connect('data/show_db.db')
     cur = db.cursor()
     cur.execute("PRAGMA foreign_keys=ON")
 
@@ -382,7 +382,7 @@ def update_show():
 
 def update_sales():
 
-    db = sqlite3.connect('show_db.db')
+    db = sqlite3.connect('data/show_db.db')
     cur = db.cursor()
     cur.execute("PRAGMA foreign_keys=ON")
 

@@ -6,3 +6,16 @@
 2018-02-19 16:17:36,175 - root - CRITICAL - show_manager : 41 - 5
 2018-02-19 16:17:36,175 - root - INFO - dstore : 17 - Entering Database module
 2018-02-19 16:17:36,182 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 16:57:43,164 - root - DEBUG - show_manager : 36 - Starting main program show_manager.py
+2018-02-19 16:57:43,164 - root - DEBUG - show_manager : 37 - 1
+2018-02-19 16:57:43,166 - root - INFO - show_manager : 38 - 2
+2018-02-19 16:57:43,167 - root - WARNING - show_manager : 39 - 3
+2018-02-19 16:57:43,167 - root - ERROR - show_manager : 40 - 4
+2018-02-19 16:57:43,167 - root - CRITICAL - show_manager : 41 - 5
+2018-02-19 16:57:43,167 - root - INFO - dstore : 17 - Entering Database module
+2018-02-19 16:57:43,173 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 16:57:46,774 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-19 16:57:46,795 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 16:57:50,456 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 16:58:29,703 - root - INFO - ui : 41 - The user made an input value error.
+2018-02-19 16:58:29,703 - root - DEBUG - show_manager : 93 - Quiting Program Normally
