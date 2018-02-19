@@ -29,3 +29,28 @@
 2018-02-19 17:04:15,127 - root - INFO - analysis : 16 - Entering Analysis module
 2018-02-19 17:04:15,150 - root - INFO - ui : 20 - Entering UI - User Interface module
 2018-02-19 17:04:53,752 - root - DEBUG - show_manager : 93 - Quiting Program Normally
+2018-02-19 17:42:44,115 - root - DEBUG - show_manager : 36 - Starting main program show_manager.py
+2018-02-19 17:42:44,115 - root - DEBUG - show_manager : 37 - 1
+2018-02-19 17:42:44,115 - root - INFO - show_manager : 38 - 2
+2018-02-19 17:42:44,115 - root - WARNING - show_manager : 39 - 3
+2018-02-19 17:42:44,116 - root - ERROR - show_manager : 40 - 4
+2018-02-19 17:42:44,116 - root - CRITICAL - show_manager : 41 - 5
+2018-02-19 17:42:44,116 - root - INFO - dstore : 17 - Entering Database module
+2018-02-19 17:42:44,122 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 17:45:20,424 - root - DEBUG - show_manager : 36 - Starting main program show_manager.py
+2018-02-19 17:45:20,424 - root - DEBUG - show_manager : 37 - 1
+2018-02-19 17:45:20,424 - root - INFO - show_manager : 38 - 2
+2018-02-19 17:45:20,424 - root - WARNING - show_manager : 39 - 3
+2018-02-19 17:45:20,424 - root - ERROR - show_manager : 40 - 4
+2018-02-19 17:45:20,424 - root - CRITICAL - show_manager : 41 - 5
+2018-02-19 17:45:20,424 - root - INFO - dstore : 17 - Entering Database module
+2018-02-19 17:45:20,430 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 17:45:28,120 - root - DEBUG - show_manager : 93 - Quiting Program Normally
+2018-02-19 17:45:35,056 - root - DEBUG - show_manager : 36 - Starting main program show_manager.py
+2018-02-19 17:45:35,057 - root - DEBUG - show_manager : 37 - 1
+2018-02-19 17:45:35,057 - root - INFO - show_manager : 38 - 2
+2018-02-19 17:45:35,057 - root - WARNING - show_manager : 39 - 3
+2018-02-19 17:45:35,057 - root - ERROR - show_manager : 40 - 4
+2018-02-19 17:45:35,058 - root - CRITICAL - show_manager : 41 - 5
+2018-02-19 17:45:35,058 - root - INFO - dstore : 17 - Entering Database module
+2018-02-19 17:45:35,067 - root - INFO - ui : 20 - Entering UI - User Interface module

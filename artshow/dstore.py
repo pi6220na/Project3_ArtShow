@@ -1,10 +1,10 @@
 import sqlite3
 import traceback
-from artshow import ui, g
+import ui, g
 from artists import Artists
-from artshow.items import Items
-from artshow.sales import Sales
-from artshow.show import Show
+from items import Items
+from sales import Sales
+from show import Show
 
 import logging
 log = logging.getLogger(__name__)

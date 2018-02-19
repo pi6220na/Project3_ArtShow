@@ -1,4 +1,4 @@
-from artshow import g
+import g
 # the following clear screen technique works on windows machines when running the .py file in a terminal or CMD prompt
 # it does not work within the pyCharm run window and instead shows a  symbol
 import os  # clear screen technique: https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console

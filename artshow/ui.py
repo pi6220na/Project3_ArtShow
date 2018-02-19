@@ -1,8 +1,8 @@
 from artists import Artists
-from artshow.items import Items
-from artshow.sales import Sales
-from artshow.show import Show
-from artshow import g
+from items import Items
+from sales import Sales
+from show import Show
+import g
 
 import logging
 import logging.config

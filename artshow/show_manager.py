@@ -21,7 +21,7 @@ Info and Error level logging entries are made and logged to artShow.log
 
 '''
 import analysis
-from artshow import ui, dstore
+import ui, dstore
 import logging
 import logging.config
 #logging.basicConfig(filename='artshow.log', level=logging.INFO)
