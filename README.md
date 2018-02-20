@@ -16,10 +16,10 @@ are enforced on the database via foreign key constraint enforcement.
 
 **Database Tables:**
 
-* artists - artist name
-* items - type, item name, artist id
-* show - show name, location, date
-* sales - item id, sale quantity, sale total, show id
+* artists - artist id, artist first name, last name
+* items - items id, type, item name, artist id(fk)
+* show - show id, show name, location, date
+* sales - sales id, item id(fk), sale quantity, sale total, show id(fk)
 
 **Modules:**
 
