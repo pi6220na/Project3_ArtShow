@@ -64,3 +64,20 @@
 2018-02-19 18:15:47,075 - root - INFO - ui : 20 - Entering UI - User Interface module
 2018-02-19 18:15:54,536 - root - INFO - analysis : 16 - Entering Analysis module
 2018-02-19 18:15:54,565 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:16:41,525 - root - INFO - show_manager : 34 - 2
+2018-02-20 00:16:41,525 - root - WARNING - show_manager : 35 - 3
+2018-02-20 00:16:41,525 - root - ERROR - show_manager : 36 - 4
+2018-02-20 00:16:41,525 - root - CRITICAL - show_manager : 37 - 5
+2018-02-20 00:16:41,525 - root - INFO - dstore : 17 - Entering Database module
+2018-02-20 00:16:41,532 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:16:49,004 - root - INFO - ui : 41 - The user made an input value error.
+2018-02-20 00:17:19,952 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:17:32,444 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:18:35,775 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:19:09,678 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:19:35,054 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:19:42,652 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:20:13,794 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:20:19,356 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-20 00:20:31,356 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-20 00:20:31,379 - root - INFO - ui : 20 - Entering UI - User Interface module

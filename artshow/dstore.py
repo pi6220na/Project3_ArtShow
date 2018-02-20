@@ -293,7 +293,7 @@ def update_items():
             try:
 
                 with db:
-                    cur.execute(sql, (item.id, item.itemType, item.itemName, item.itemArtistid))
+                    cur.execute(sql, (item.id, item.itemType, item.itemName, item.itemArtistId))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)

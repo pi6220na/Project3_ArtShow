@@ -318,12 +318,12 @@ def modify_items_record(item_index, item_id):
             break
 
     update_ind = g.MODIFY
-    item = Artists(itemtype, itemname, itemartistid, update_ind)  # generate a new replacement object
+    item = Items(itemtype, itemname, itemartistid, update_ind)  # generate a new replacement object
     item.set_id(item_id)
     g.items_list.insert(item_index, item)  # insert the object back into the list where it came from
 
-    # for item in g.items_list:
-    #     message(item)
+    for item in g.items_list:
+        message(item)
 
 
 def delete_items_record(item_index):
@@ -335,7 +335,7 @@ def delete_items_record(item_index):
 
 
 def update_shows_record():
-    '''This function will update or delete an item record from the items_list list'''
+    '''This function will update or delete an item record from the show_list list'''
 
     clear()
     message('')
