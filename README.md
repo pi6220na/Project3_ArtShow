@@ -1,18 +1,17 @@
 # Project3_ArtShow
 ## MCTC ITEC 2905-01 Capstone - Project 3 - Tour Merchandise Manager (Art Show)
 
-Description: This program uses the SQLite Database Python engine to store user input data containing
+Description: This program uses the SQLite Database Python engine to store user-input data containing
 information for art work items sold at art shows. A command line interface is used to allow
-the user to enter data, modify data, delete data, and perform analysis on show sales.
+the user to enter, modify, and delete records, and perform analysis on show sales.
 
 At the start of the program, all database records are read into their corresponding list structure.
 All processing is then performed on the lists.
 As the element lists are updated, the lists are iterated through and the database is updated according
 to each list element's update-ind (add, modify, delete, blank(do nothing)).
 
-Simple analysis functions are available to format the information based on the data relationships.
-E.g. The Sales record/element contains pointers (integer id's) to other records/elements. These relationships
-are enforced on the database via foreign key constraint enforcement.
+A Simple analysis function, with four reports generated, are run by menu choice to format the information based on the data relationships. E.g. The Sales record/element contains pointers (id's) to other records/elements. These relationships
+are enforced on the database via foreign key constraint enforcement (PRAGMA Statement).
 
 **Database Tables:**
 
