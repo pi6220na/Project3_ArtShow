@@ -54,3 +54,13 @@
 2018-02-19 17:45:35,058 - root - CRITICAL - show_manager : 41 - 5
 2018-02-19 17:45:35,058 - root - INFO - dstore : 17 - Entering Database module
 2018-02-19 17:45:35,067 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 18:15:47,067 - root - DEBUG - show_manager : 36 - Starting main program show_manager.py
+2018-02-19 18:15:47,068 - root - DEBUG - show_manager : 37 - 1
+2018-02-19 18:15:47,068 - root - INFO - show_manager : 38 - 2
+2018-02-19 18:15:47,068 - root - WARNING - show_manager : 39 - 3
+2018-02-19 18:15:47,068 - root - ERROR - show_manager : 40 - 4
+2018-02-19 18:15:47,068 - root - CRITICAL - show_manager : 41 - 5
+2018-02-19 18:15:47,068 - root - INFO - dstore : 17 - Entering Database module
+2018-02-19 18:15:47,075 - root - INFO - ui : 20 - Entering UI - User Interface module
+2018-02-19 18:15:54,536 - root - INFO - analysis : 16 - Entering Analysis module
+2018-02-19 18:15:54,565 - root - INFO - ui : 20 - Entering UI - User Interface module

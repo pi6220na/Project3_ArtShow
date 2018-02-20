@@ -91,10 +91,44 @@ def add_sales_record():
 
     while True:
         clear()
-        saleitemid = int(input('Enter the item ID of the sale item (an integer from above list): '))
-        salequantity = int(input('Enter the quantity of sales items sold: '))
-        saletotal = float(input('Enter the total sale dollar amount: '))
-        showid = int(input('Enter the Show ID (an integer from the above list): '))
+
+        while True:
+            try:
+                saleitemid = int(input('Enter the item ID of the sale item (an integer from above list): '))
+                if saleitemid < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
+        while True:
+            try:
+                salequantity = int(input('Enter the quantity of sales items sold: '))
+                if salequantity < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
+        while True:
+            try:
+                saletotal = float(input('Enter the total sale dollar amount: '))
+                if saletotal < 0:
+                    message('Enter a positive amount')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole decimal number')
+        while True:
+            try:
+                showid = int(input('Enter the Show ID (an integer from the above list): '))
+                if showid < 0:
+                    message('Enter a positive amount')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
+
         message('You entered {} {} {} {} '.format(saleitemid, salequantity, saletotal, showid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':
@@ -159,7 +193,15 @@ def update_artists_record():
     artist_id = 0
     valid = False
     while True:
-        choiceNum = int(input('Please specify the artist record id you want to modify: '))
+        while True:
+            try:
+                choiceNum = int(input('Please specify the artist record id you want to modify: '))
+                if choiceNum < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
 
         for idx, art in enumerate(g.artists_list):
             #print(idx, art)
@@ -225,7 +267,15 @@ def update_items_record():
     item_id = 0
     valid = False
     while True:
-        choiceNum = int(input('Please specify the record item id you want to modify: '))
+        while True:
+            try:
+                choiceNum = int(input('Please specify the record item id you want to modify: '))
+                if choiceNum < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
 
         for idx, item in enumerate(g.items_list):
             #print(idx, item)
@@ -253,7 +303,15 @@ def modify_items_record(item_index, item_id):
         clear()
         itemtype = input('Enter the type of item (e.g. print, painting, sculpture, other): ')
         itemname = input('Enter the name of the item: ')
-        itemartistid = int(input('Enter the Artist ID from the above list: '))
+        while True:
+            try:
+                itemartistid = int(input('Enter the Artist ID from the above list: '))
+                if itemartistid < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
         message('You entered {} {} {}  '.format(itemtype, itemname, itemartistid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':
@@ -290,7 +348,15 @@ def update_shows_record():
     show_id = 0
     valid = False
     while True:
-        choiceNum = int(input('Please specify the record Show id you want to modify: '))
+        while True:
+            try:
+                choiceNum = int(input('Please specify the record Show id you want to modify: '))
+                if choiceNum < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
 
         for idx, show in enumerate(g.show_list):
             #print(idx, show)
@@ -298,7 +364,7 @@ def update_shows_record():
                 #print(show.id, choiceNum)
                 valid = True
                 show_index = int(idx)
-                show_index = show_id
+                show_id = show.id
 
         if valid:
             mod_type = input('Modify the record or Delete the record? Input "m" or "d":')
@@ -327,8 +393,10 @@ def modify_shows_record(show_index, show_id):
     update_ind = g.MODIFY
     show = Show(showname, showlocation, showdate, update_ind)  # generate a new replacement object
     show.set_id(show_id)
-    g.items_list.insert(show_index, show)  # insert the object back into the list where it came from
+    g.show_list.insert(show_index, show)  # insert the object back into the list where it came from
 
+    for item in g.show_list:
+        print(item)
 
 
 def delete_shows_record(show_index):
@@ -353,7 +421,15 @@ def update_sales_record():
     sale_id = 0
     valid = False
     while True:
-        choiceNum = int(input('Please specify the record Sale id you want to modify: '))
+        while True:
+            try:
+                choiceNum = int(input('Please specify the record Sale id you want to modify: '))
+                if choiceNum < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
 
         for idx, sale in enumerate(g.sales_list):
             #print(idx, sale)
@@ -375,14 +451,47 @@ def update_sales_record():
 
 def modify_sales_record(sale_index, sale_id):
     print('Your record to modify is:')
-    print(g.show_list[sale_index])
+    print(g.sales_list[sale_index])
 
     while True:
         clear()
-        saleitemid = int(input('Enter the item ID of the sale item (an integer from above list): '))
-        salequantity = int(input('Enter the quantity of sales items sold: '))
-        saletotal = float(input('Enter the total sale dollar amount: '))
-        showid = int(input('Enter the Show ID (an integer from the above list): '))
+
+        while True:
+            try:
+                saleitemid = int(input('Enter the item ID of the sale item (an integer from above list): '))
+                if saleitemid < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
+        while True:
+            try:
+                salequantity = int(input('Enter the quantity of sales items sold: '))
+                if salequantity < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
+        while True:
+            try:
+                saletotal = float(input('Enter the total sale dollar amount: '))
+                if saletotal < 0:
+                    message('Enter a positive amount')
+                else:
+                    break
+            except ValueError:
+                message('Enter a positive amount')
+        while True:
+            try:
+                showid = int(input('Enter the Show ID (an integer from the above list): '))
+                if showid < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
         message('You entered {} {} {} {} '.format(saleitemid, salequantity, saletotal, showid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':
@@ -458,7 +567,15 @@ def input_art_items_info():
         clear()
         itemtype = input('Enter the type of item (e.g. print, painting, sculpture, other): ')
         itemname = input('Enter the name of the item: ')
-        itemartistid = int(input('Enter the Artist ID from the above list: '))
+        while True:
+            try:
+                itemartistid = int(input('Enter the Artist ID from the above list: '))
+                if itemartistid < 0:
+                    message('Enter a positive number')
+                else:
+                    break
+            except ValueError:
+                message('Enter a whole number')
         message('You entered {} {} {}  '.format(itemtype, itemname, itemartistid))
         check = input('Is this correct? "y" or "n": ')
         if check.lower() == 'y':

@@ -289,7 +289,7 @@ def update_items():
 
         elif item.update_ind == g.MODIFY:      # update a modified list element to database
 
-            sql = 'update {} set Itemsid = ?, ItemType = ?, ItemName = ?, where ItemArtistid = ?'.format('items')
+            sql = 'update {} set Itemsid = ?, ItemType = ?, ItemName = ? where ItemArtistid = ?'.format('items')
             try:
 
                 with db:
@@ -350,7 +350,8 @@ def update_show():
 
             try:
 
-                sql = 'update {} set ShowName = ?, ShowLocation = ?, ShowDate = ?, where Showid = ?'.format('show')
+                sql = 'update {} set ShowName = ?, ShowLocation = ?, ShowDate = ? where Showid = ?'.format('show')
+
                 with db:
                     cur.execute(sql, (show.showName, show.showLocation, show.showDate, show.id))
 
@@ -411,7 +412,7 @@ def update_sales():
                   'Showid = ? where Saleid = ?'.format('sales')
             try:
                 with db:
-                    cur.execute(sql, (sale.saleItemId, sale.SaleQuantity, sale.SaleTotal, sale.showId, sale.id))
+                    cur.execute(sql, (sale.saleItemId, sale.saleQuantity, sale.saleTotal, sale.showId, sale.id))
 
             except sqlite3.Error as e:
                 print('Database error: ', e)
